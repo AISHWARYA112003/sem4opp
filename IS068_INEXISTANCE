@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+	class counter
+		{
+		public:
+			static int count;
+			counter() { count++; }
+			~counter() { count--; }
+		}; 
+		
+	int counter::count;
+	void f();
+	
+		          int main(void)
+			  {
+			        counter ol;
+				cout<<"objects in exitence:";
+				cout<<counter::count<<"\n";
+				counter o2;
+				cout<<"objects in existance:";
+				cout<<counter::count<<"\n";
+				f();
+				cout<<"objects in existance:";
+				cout<<counter::count<<"\n";
+				return 0;
+			}
+				void f()
+					{
+						counter temp;
+						cout<<"objects in existance:";
+						cout<<counter::count<<"\n";
+					}
